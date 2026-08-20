@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="440" viewBox="0 0 920 440" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
+<rect width="920" height="440" rx="10" fill="#fbfbf9"/>
+<text x="40" y="50" font-size="19" font-weight="700" fill="#16181d" font-family="ui-sans-serif,system-ui,sans-serif">The harmonic ladder</text>
+<text x="40" y="72" font-size="12.5" fill="#6b7280" font-family="ui-sans-serif,system-ui,sans-serif">every stream emits on an integer divisor of the 100 Hz action rate</text>
+<line x1="210.0" y1="100" x2="210.0" y2="342" stroke="#e4e6ea" stroke-width="1"/>
+<text x="210.0" y="366" font-size="11" fill="#6b7280" text-anchor="middle">0</text>
+<line x1="342.4" y1="100" x2="342.4" y2="342" stroke="#e4e6ea" stroke-width="1"/>
+<text x="342.4" y="366" font-size="11" fill="#6b7280" text-anchor="middle">100</text>
+<line x1="474.8" y1="100" x2="474.8" y2="342" stroke="#e4e6ea" stroke-width="1"/>
+<text x="474.8" y="366" font-size="11" fill="#6b7280" text-anchor="middle">200</text>
+<line x1="607.2" y1="100" x2="607.2" y2="342" stroke="#e4e6ea" stroke-width="1"/>
+<text x="607.2" y="366" font-size="11" fill="#6b7280" text-anchor="middle">300</text>
+<line x1="739.6" y1="100" x2="739.6" y2="342" stroke="#e4e6ea" stroke-width="1"/>
+<text x="739.6" y="366" font-size="11" fill="#6b7280" text-anchor="middle">400</text>
+<line x1="872.0" y1="100" x2="872.0" y2="342" stroke="#e4e6ea" stroke-width="1"/>
+<text x="872.0" y="366" font-size="11" fill="#6b7280" text-anchor="middle">500</text>
+<text x="884" y="366" font-size="11" fill="#6b7280">ms</text>
+<text x="40" y="130" font-size="13" fill="#16181d">reflex</text>
+<text x="196" y="130" font-size="11.5" fill="#6b7280" text-anchor="end">100 Hz  ÷1</text>
+<line x1="210" y1="126" x2="872" y2="126" stroke="#e4e6ea" stroke-width="1.5"/>
+<circle cx="210.0" cy="126" r="2.6" fill="#047857"/>
+<circle cx="223.2" cy="126" r="2.6" fill="#047857"/>
+<circle cx="236.5" cy="126" r="2.6" fill="#047857"/>
+<circle cx="249.7" cy="126" r="2.6" fill="#047857"/>
+<circle cx="263.0" cy="126" r="2.6" fill="#047857"/>
+<circle cx="276.2" cy="126" r="2.6" fill="#047857"/>
+<circle cx="289.4" cy="126" r="2.6" fill="#047857"/>
+<circle cx="302.7" cy="126" r="2.6" fill="#047857"/>
+<circle cx="315.9" cy="126" r="2.6" fill="#047857"/>
+<circle cx="329.2" cy="126" r="2.6" fill="#047857"/>
+<circle cx="342.4" cy="126" r="2.6" fill="#047857"/>
+<circle cx="355.6" cy="126" r="2.6" fill="#047857"/>
+<circle cx="368.9" cy="126" r="2.6" fill="#047857"/>
+<circle cx="382.1" cy="126" r="2.6" fill="#047857"/>
+<circle cx="395.4" cy="126" r="2.6" fill="#047857"/>
+<circle cx="408.6" cy="126" r="2.6" fill="#047857"/>
+<circle cx="421.8" cy="126" r="2.6" fill="#047857"/>
+<circle cx="435.1" cy="126" r="2.6" fill="#047857"/>
+<circle cx="448.3" cy="126" r="2.6" fill="#047857"/>
+<circle cx="461.6" cy="126" r="2.6" fill="#047857"/>
+<circle cx="474.8" cy="126" r="2.6" fill="#047857"/>
+<circle cx="488.0" cy="126" r="2.6" fill="#047857"/>
+<circle cx="501.3" cy="126" r="2.6" fill="#047857"/>
+<circle cx="514.5" cy="126" r="2.6" fill="#047857"/>
+<circle cx="527.8" cy="126" r="2.6" fill="#047857"/>
+<circle cx="541.0" cy="126" r="2.6" fill="#047857"/>
+<circle cx="554.2" cy="126" r="2.6" fill="#047857"/>
+<circle cx="567.5" cy="126" r="2.6" fill="#047857"/>
+<circle cx="580.7" cy="126" r="2.6" fill="#047857"/>
+<circle cx="594.0" cy="126" r="2.6" fill="#047857"/>
+<circle cx="607.2" cy="126" r="2.6" fill="#047857"/>
+<circle cx="620.4" cy="126" r="2.6" fill="#047857"/>
+<circle cx="633.7" cy="126" r="2.6" fill="#047857"/>
+<circle cx="646.9" cy="126" r="2.6" fill="#047857"/>
+<circle cx="660.2" cy="126" r="2.6" fill="#047857"/>
+<circle cx="673.4" cy="126" r="2.6" fill="#047857"/>
+<circle cx="686.6" cy="126" r="2.6" fill="#047857"/>
+<circle cx="699.9" cy="126" r="2.6" fill="#047857"/>
+<circle cx="713.1" cy="126" r="2.6" fill="#047857"/>
+<circle cx="726.4" cy="126" r="2.6" fill="#047857"/>
+<circle cx="739.6" cy="126" r="2.6" fill="#047857"/>
+<circle cx="752.8" cy="126" r="2.6" fill="#047857"/>
+<circle cx="766.1" cy="126" r="2.6" fill="#047857"/>
+<circle cx="779.3" cy="126" r="2.6" fill="#047857"/>
+<circle cx="792.6" cy="126" r="2.6" fill="#047857"/>
+<circle cx="805.8" cy="126" r="2.6" fill="#047857"/>
+<circle cx="819.0" cy="126" r="2.6" fill="#047857"/>
+<circle cx="832.3" cy="126" r="2.6" fill="#047857"/>
+<circle cx="845.5" cy="126" r="2.6" fill="#047857"/>
+<circle cx="858.8" cy="126" r="2.6" fill="#047857"/>
+<circle cx="872.0" cy="126" r="2.6" fill="#047857"/>
+<text x="40" y="170" font-size="13" fill="#16181d">proprio</text>
+<text x="196" y="170" font-size="11.5" fill="#6b7280" text-anchor="end">20 Hz  ÷5</text>
+<line x1="210" y1="166" x2="872" y2="166" stroke="#e4e6ea" stroke-width="1.5"/>
+<circle cx="210.0" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="276.2" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="342.4" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="408.6" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="474.8" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="541.0" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="607.2" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="673.4" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="739.6" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="805.8" cy="166" r="4.0" fill="#1d4ed8"/>
+<circle cx="872.0" cy="166" r="4.0" fill="#1d4ed8"/>
+<text x="40" y="210" font-size="13" fill="#16181d">wrist cam</text>
+<text x="196" y="210" font-size="11.5" fill="#6b7280" text-anchor="end">10 Hz  ÷10</text>
+<line x1="210" y1="206" x2="872" y2="206" stroke="#e4e6ea" stroke-width="1.5"/>
+<circle cx="210.0" cy="206" r="4.0" fill="#1d4ed8"/>
+<circle cx="342.4" cy="206" r="4.0" fill="#1d4ed8"/>
+<circle cx="474.8" cy="206" r="4.0" fill="#1d4ed8"/>
+<circle cx="607.2" cy="206" r="4.0" fill="#1d4ed8"/>
+<circle cx="739.6" cy="206" r="4.0" fill="#1d4ed8"/>
+<circle cx="872.0" cy="206" r="4.0" fill="#1d4ed8"/>
+<text x="40" y="250" font-size="13" fill="#16181d">action</text>
+<text x="196" y="250" font-size="11.5" fill="#6b7280" text-anchor="end">10 Hz  ÷10</text>
+<line x1="210" y1="246" x2="872" y2="246" stroke="#e4e6ea" stroke-width="1.5"/>
+<rect x="210.0" y="238" width="662.0" height="16" rx="8" fill="#c2410c" opacity="0.12"/>
+<rect x="210.0" y="238" width="132.4" height="16" rx="8" fill="#c2410c" opacity="0.34"/>
+<rect x="205.5" y="241.5" width="9" height="9" fill="#c2410c" transform="rotate(45 210.0 246)"/>
+<rect x="337.9" y="241.5" width="9" height="9" fill="#c2410c" transform="rotate(45 342.4 246)"/>
+<rect x="470.3" y="241.5" width="9" height="9" fill="#c2410c" transform="rotate(45 474.8 246)"/>
+<rect x="602.7" y="241.5" width="9" height="9" fill="#c2410c" transform="rotate(45 607.2 246)"/>
+<rect x="735.1" y="241.5" width="9" height="9" fill="#c2410c" transform="rotate(45 739.6 246)"/>
+<rect x="867.5" y="241.5" width="9" height="9" fill="#c2410c" transform="rotate(45 872.0 246)"/>
+<text x="276.2" y="231" font-size="10" fill="#c2410c" text-anchor="middle">committed</text>
+<text x="607.2" y="231" font-size="10" fill="#c2410c" text-anchor="middle">500 ms chunk, re-planned every 100 ms</text>
+<text x="40" y="290" font-size="13" fill="#16181d">head cam</text>
+<text x="196" y="290" font-size="11.5" fill="#6b7280" text-anchor="end">5 Hz  ÷20</text>
+<line x1="210" y1="286" x2="872" y2="286" stroke="#e4e6ea" stroke-width="1.5"/>
+<circle cx="210.0" cy="286" r="4.0" fill="#1d4ed8"/>
+<circle cx="474.8" cy="286" r="4.0" fill="#1d4ed8"/>
+<circle cx="739.6" cy="286" r="4.0" fill="#1d4ed8"/>
+<text x="40" y="330" font-size="13" fill="#16181d">register</text>
+<text x="196" y="330" font-size="11.5" fill="#6b7280" text-anchor="end">2 Hz  ÷50</text>
+<line x1="210" y1="326" x2="872" y2="326" stroke="#e4e6ea" stroke-width="1.5"/>
+<circle cx="210.0" cy="326" r="4.5" fill="#fbfbf9" stroke="#6d28d9" stroke-width="2"/>
+<circle cx="872.0" cy="326" r="4.5" fill="#fbfbf9" stroke="#6d28d9" stroke-width="2"/>
+<line x1="210.0" y1="391" x2="210.0" y2="403" stroke="#c2410c" stroke-width="1.5"/>
+<line x1="315.9" y1="391" x2="315.9" y2="403" stroke="#c2410c" stroke-width="1.5"/>
+<line x1="210.0" y1="398" x2="315.9" y2="398" stroke="#c2410c" stroke-width="1.5"/>
+<text x="263.0" y="386" font-size="12" fill="#c2410c" text-anchor="middle">&#948;</text>
+<text x="337.1" y="402" font-size="11.5" fill="#6b7280" font-family="ui-sans-serif,system-ui,sans-serif">an action token at t attends only to sensors at t &#8722; &#948;</text>
+</svg>

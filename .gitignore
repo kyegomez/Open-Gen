@@ -17,7 +17,10 @@ eggs/
 lib/
 lib64/
 parts/
+pyrightconfig.json
 sdist/
+secretive/
+secretive
 var/
 wheels/
 share/python-wheels/
