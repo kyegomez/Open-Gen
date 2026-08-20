@@ -4,11 +4,11 @@
 
 Open source implementation of <a href="https://generalistai.com/blog/gen-1.5">GEN</a>, the embodied foundation model family from Generalist AI, in Pytorch.
 
-GEN is the first model line for which one-shot and few-shot learning of *physical* skills appears to emerge from pretraining alone — show it three seconds of a demonstration, and it does the task, with no gradient updates. This repository reconstructs the architecture that makes that possible: a decoder-only transformer over **continuous time**, where sensing and acting are asynchronous token streams running at different clock rates rather than two models with a handoff.
+GEN is the first model line for which one-shot and few-shot learning of *physical* skills appears to emerge from pretraining alone. Show it three seconds of a demonstration and it does the task, with no gradient updates. This repository reconstructs the architecture that makes that possible: a decoder-only transformer over **continuous time**, where sensing and acting are asynchronous token streams running at different clock rates rather than two models with a handoff.
 
-The trick that carries the whole design is one line of masking. An action token at time `t` may only attend to sensor tokens at `t - δ`, where δ is the inference latency, sampled during training. Latency becomes a *modelled* quantity instead of an engineering problem to route around — which is why no System-1/System-2 split and no inference-time guidance are needed to hit 100 Hz from a 7B model.
+The trick that carries the whole design is one line of masking. An action token at time `t` may only attend to sensor tokens at `t - δ`, where δ is the inference latency, sampled during training. Latency becomes a *modelled* quantity instead of an engineering problem to route around, which is why no System-1/System-2 split and no inference-time guidance are needed to hit 100 Hz from a 7B model.
 
-Generalist has published capability results and a few architectural names, but no model card and no code. Everything here follows the evidence, with the reasoning written out claim by claim in <a href="./docs/ARCHITECTURE.md">ARCHITECTURE.md</a> — including <a href="./docs/ARCHITECTURE.md#14-part-x--where-this-reconstruction-is-most-likely-wrong">a ranked list of where the reconstruction is most likely wrong</a>. Not affiliated with Generalist AI.
+Generalist has published capability results and a few architectural names, but no model card and no code. Everything here follows the evidence, with the reasoning written out claim by claim in <a href="./docs/ARCHITECTURE.md">ARCHITECTURE.md</a>, including <a href="./docs/ARCHITECTURE.md#14-part-x--where-this-reconstruction-is-most-likely-wrong">a ranked list of where the reconstruction is most likely wrong</a>. Not affiliated with Generalist AI.
 
 ## Install
 
@@ -74,7 +74,7 @@ flowchart LR
     PR -.-> RX
 ```
 
-Three subsystems, matching the decomposition Generalist uses when reporting per-group fine-tuning weight deltas. Every stream emits on an integer divisor of the 100 Hz action rate — the *harmonic ladder* — so token slots land on a shared grid and the KV cache layout stays static enough to page:
+Three subsystems, matching the decomposition Generalist uses when reporting per-group fine-tuning weight deltas. Every stream emits on an integer divisor of the 100 Hz action rate (the *harmonic ladder*), so token slots land on a shared grid and the KV cache layout stays static enough to page:
 
 ```
             0     10    20    30    40    50    60    70    80    90    100   ms
@@ -91,11 +91,11 @@ register    ○─────────────────────�
             ◆ emits 500 ms of actions; the first 100 ms is committed
 ```
 
-Nothing waits on anything slower than itself. The trunk thinks at 10 Hz, registers at 2 Hz, and the reflex loop closes on force and proprioception at the full control rate — one model, temporally separated, rather than two models in a hierarchy.
+Nothing waits on anything slower than itself. The trunk thinks at 10 Hz, registers at 2 Hz, and the reflex loop closes on force and proprioception at the full control rate. One model, temporally separated, rather than two models in a hierarchy.
 
 ## Physical prompting
 
-A physical prompt is a 3–12 second sensorimotor demonstration spliced into the context. It is deliberately *not* a special input type — no prompt-role embedding, no separator token. The moment the model can tell "prompt" from "history", emergent in-context learning becomes engineered in-context learning.
+A physical prompt is a 3–12 second sensorimotor demonstration spliced into the context. It is deliberately *not* a special input type: no prompt-role embedding, no separator token. The moment the model can tell "prompt" from "history", emergent in-context learning becomes engineered in-context learning.
 
 ```python
 from open_gen.gen_model import GenRuntime, PhysicalPrompt
@@ -114,7 +114,7 @@ runtime.reset()
 runtime.prime(prompt)                                    # KV pages, pinned
 ```
 
-Because prompts are encoded once and their pages pinned, swapping one is a page-table edit rather than a forward pass through a 10B encoder. Composition is free — two prompts are simply two spans, and the model invents the bridging motions itself.
+Because prompts are encoded once and their pages pinned, swapping one is a page-table edit rather than a forward pass through a 10B encoder. Composition is free: two prompts are simply two spans, and the model invents the bridging motions itself.
 
 ## Real-time rollout
 
@@ -148,7 +148,7 @@ spec = EmbodimentSpec.dummy(cfg.proprio, cfg.vision, cfg.action_space, dof=7)
 features = spec.feature_vector()
 ```
 
-Actions live in a universal space — bimanual SE(3) twist, finger DoF, and a padded joint channel with a validity mask — and a hypernetwork generates the low-rank output adapter from the hand card. A 6-DoF arm and a 16-DoF humanoid write into the same tensor.
+Actions live in a universal space (bimanual SE(3) twist, finger DoF, and a padded joint channel with a validity mask), and a hypernetwork generates the low-rank output adapter from the hand card. A 6-DoF arm and a 16-DoF humanoid write into the same tensor.
 
 ## Scale
 
@@ -172,7 +172,7 @@ print(count_parameters(model))
 | `og_7b` | 7.25B | 4096 | 36 | 32 (8) | 8 / 88 / 3% |
 | `og_11b` | 11.02B | 5120 | 36 | 40 (8) | 6 / 90 / 3% |
 
-Reproducing the 1B-ossifies / 7B-doesn't crossover is the single best correctness check on this implementation — it is the one *falsifiable* published result, unlike the demo videos.
+Reproducing the 1B-ossifies / 7B-doesn't crossover is the single best correctness check on this implementation. It is the one *falsifiable* published result, unlike the demo videos.
 
 ## Evaluation
 
@@ -185,7 +185,7 @@ mse = model.compute_loss(batch, model(batch)).next_action_mse
 
 ## Latency sweep
 
-The Harmonic Reasoning test. Success should be roughly flat in δ across the deployment range — if it isn't, the curriculum didn't take.
+The Harmonic Reasoning test. Success should be roughly flat in δ across the deployment range. If it isn't, the curriculum didn't take.
 
 ```python
 for delta_ms in (0, 40, 80, 160, 250):
@@ -287,4 +287,6 @@ for delta_ms in (0, 40, 80, 160, 250):
 }
 ```
 
-*For machines, we believe it is only through experiencing the physical world, that all the knowledge on Wikipedia can finally make sense.* — Generalist Team
+*For machines, we believe it is only through experiencing the physical world, that all the knowledge on Wikipedia can finally make sense.*
+
+Generalist Team, GEN-1
